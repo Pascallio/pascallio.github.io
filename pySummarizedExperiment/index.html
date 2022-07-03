@@ -12,7 +12,7 @@
 
 
 
-<title>Usage</title>
+<title>pySummarizedExperiment</title>
 
 <script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
 
@@ -43,12 +43,10 @@
 
 
 
-<h1 class="title toc-ignore">Usage</h1>
+<h1 class="title toc-ignore">pySummarizedExperiment</h1>
 
 
 
-<div id="pysummarizedexperiment" class="section level1">
-<h1>pySummarizedExperiment</h1>
 <p>In the various -omics fields measurements are often done on assay of genes x samples or compounds x aliquots (here, I will generalize by using features x samples). However, data is often stored in a ‘long’ dataframe format where each combination of feature - sample - measurement gets a single row. This is not an issue on a small scale, but as I will demonstrate, this becomes problematic on large-scale experiments. Before I dive into pySummarizedExperiment, Python version of R’s SummarizedExperiment package, I will discuss the long dataframe format first. An example is shown below.</p>
 <table>
 <thead>
@@ -62,47 +60,47 @@
 <tr class="odd">
 <td align="right">1</td>
 <td align="left">A</td>
-<td align="right">519.3535</td>
+<td align="right">314.0590</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
 <td align="left">A</td>
-<td align="right">807.5802</td>
+<td align="right">540.8519</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
 <td align="left">A</td>
-<td align="right">148.1028</td>
+<td align="right">133.3960</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
 <td align="left">B</td>
-<td align="right">381.8558</td>
+<td align="right">892.9832</td>
 </tr>
 <tr class="odd">
 <td align="right">2</td>
 <td align="left">B</td>
-<td align="right">314.7766</td>
+<td align="right">603.2795</td>
 </tr>
 <tr class="even">
 <td align="right">3</td>
 <td align="left">B</td>
-<td align="right">978.5326</td>
+<td align="right">675.1796</td>
 </tr>
 <tr class="odd">
 <td align="right">1</td>
 <td align="left">C</td>
-<td align="right">114.9053</td>
+<td align="right">118.8818</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
 <td align="left">C</td>
-<td align="right">222.5788</td>
+<td align="right">330.1472</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
 <td align="left">C</td>
-<td align="right">456.2355</td>
+<td align="right">329.3114</td>
 </tr>
 </tbody>
 </table>
@@ -117,7 +115,6 @@
 <p>The pySummarizedExperiment object circumvents these issues by restructuring data with constraints. These prevent the occurrence of many-to-many relationships between columns. Simultaneously, this separates metadata from actual data, making it possible to apply algorithms without sub setting.</p>
 <p>In fact, due to these constraints, the pySummarizedExperiment minimizes the amount of memory any omics dataset will use. This is proven by plotting the potential fold change in memory of a long dataframe and the same data in a pySummarizedExperiment. We can see that this number approaches the number of metadata columns in the samples + columns in features. Let’s take a practical example from metabolomics. In a typical untargeted metabolomics dataset we have about 100 samples and 10.000 compounds. However, for each sample, we save quite some metadata, namely Datetime, type, calline, replicate, and batch. For each compound we might save it’s MZmed, MZmin, MZmax, RTmed, Rtmin, RTmax, nPeaks, RSD, and Blank effect. This could be extended with isotope, adduct and/or fragment status, etc. However, with these columns we can save up to 14x in comparison with a long dataframe. This means a 1.4GB dataset can be reduced to just 100MB, which easily allows for machine learning algorithms and other applications.</p>
 <p>The core message of this post is to separate your metadata from your data whenever possible. To still have all (meta)data available in a single object, pySummarizedExperiment was developed.</p>
-</div>
 </div>
 
 
