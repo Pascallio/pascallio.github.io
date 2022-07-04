@@ -1,7 +1,10 @@
 ---
 layout: page
+title: pySummarizedExperiment
 permalink: /pysummarizedexperiment
 ---
+
+# pySummarizedExperiment
 
 In the various -omics fields measurements are often done on assay of
 genes x samples or compounds x aliquots (here, I will generalize by
@@ -11,7 +14,9 @@ measurement gets a single row. This is not an issue on a small scale,
 but as I will demonstrate, this becomes problematic on large-scale
 experiments. Before I dive into pySummarizedExperiment, Python version
 of R’s SummarizedExperiment package, I will discuss the long dataframe
-format first. An example is shown below.
+format first. 
+
+## Long dataframe
 
 <table>
 <thead>
