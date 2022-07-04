@@ -1,4 +1,8 @@
-# pySummarizedExperiment
+---
+layout: page
+title: pySummarizedExperiment
+permalink: /pySummarizedExperiment
+---
 
 In the various -omics fields measurements are often done on assay of
 genes x samples or compounds x aliquots (here, I will generalize by
@@ -111,7 +115,7 @@ dataframe, that become increasingly apparent with bigger studies.
 
 ## The pySummarizedExperiment object
 
-<img src="images/pySummarizedExperiment.png" width="400px" />
+<img src="assets/img/pySummarizedExperiment.png" width="400px" />
 
 The pySummarizedExperiment object circumvents these issues by
 restructuring data with constraints. These prevent the occurrence of
