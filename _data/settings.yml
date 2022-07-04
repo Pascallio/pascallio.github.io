@@ -7,7 +7,7 @@ disqus:
 google-ID: 'UA-112060364-2'
 
 menu:
-- {name: 'pySummarizedExperiment',  url: 'pySummarizedExperiment'}
+- {name: 'pySummarizedExperiment',  url: 'pysummarizedexperiment'}
 - {name: 'About',              url: 'about'}
 - {name: 'Contact',            url: 'contact'}
 

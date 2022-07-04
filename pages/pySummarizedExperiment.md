@@ -1,7 +1,7 @@
 ---
 layout: page
 title: pySummarizedExperiment
-permalink: /pySummarizedExperiment
+permalink: /pysummarizedexperiment
 ---
 
 In the various -omics fields measurements are often done on assay of
