@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
+author: "Pascal Maas"
 title: pySummarizedExperiment
-permalink: /pysummarizedexperiment
+categories: python
+image: pySummarizedExperiment.png
 ---
 
 # pySummarizedExperiment
