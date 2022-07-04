@@ -1,6 +1,6 @@
 # Change 'comments' to true for Disqus comments
 disqus:
-  comments: true
+  comments: false
   disqus_shortname: 'millennial-3'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
@@ -24,6 +24,6 @@ pagination:
 
 sharing_button_prompt: 'Feel free to share!'
 
-# related_posts: 'You may also enjoy...'W
+# related_posts: 'You may also enjoy...'
 
 post_date_prefix: 'Written on'
