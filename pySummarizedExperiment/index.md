@@ -1,3 +1,5 @@
+# pySummarizedExperiment
+
 In the various -omics fields measurements are often done on assay of
 genes x samples or compounds x aliquots (here, I will generalize by
 using features x samples). However, data is often stored in a ‘long’
