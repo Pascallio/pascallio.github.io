@@ -119,7 +119,7 @@ dataframe, that become increasingly apparent with bigger studies.
 
 ## The pySummarizedExperiment object
 
-<img src="assets/img/pySummarizedExperiment.png" width="400px" />
+<!-- <img src="assets/img/pySummarizedExperiment.png" width="400px" /> -->
 
 The pySummarizedExperiment object circumvents these issues by
 restructuring data with constraints. These prevent the occurrence of
