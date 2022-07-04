@@ -1,12 +1,10 @@
 ---
 layout: post
-author: "Pascal Maas"
 title: pySummarizedExperiment
+author: "Pascal Maas"
 categories: python
 image: pySummarizedExperiment.png
 ---
-
-# pySummarizedExperiment
 
 In the various -omics fields measurements are often done on assay of
 genes x samples or compounds x aliquots (here, I will generalize by
