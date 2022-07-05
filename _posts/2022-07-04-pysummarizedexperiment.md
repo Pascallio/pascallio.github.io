@@ -70,7 +70,6 @@ algorithms without sub setting. Let's take an example similar to the long datafr
 
 
 ```python
-from pySummarizedExperiment import pySummarizedExperiment
 import pandas as pd
 from random import randint
 from random import seed
@@ -195,6 +194,7 @@ Next, we can create the object by supplying the dataframe and the names of the c
 
 
 ```python
+from pySummarizedExperiment import pySummarizedExperiment
 exp = pySummarizedExperiment(longDf = df, rowIndex = "Feature", colIndex = "Sample")
 print(exp)
 ```
