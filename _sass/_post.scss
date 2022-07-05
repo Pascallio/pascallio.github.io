@@ -15,6 +15,14 @@
   display: block;
   max-width: 600px;
 }
+
+img[alt="png"] {
+  align: middle;
+  margin: 5px auto 25px;
+  display: block;
+  max-width: 600px;
+}
+
 @media (max-width: $container-width) {
   .post-content {
     width: 60vw;
