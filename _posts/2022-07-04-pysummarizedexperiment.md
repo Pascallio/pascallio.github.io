@@ -242,11 +242,11 @@ exp.boxplot()
     
 ![png](/assets/img/blog_10_1.png)
 
-
 ```python
 exp.boxplot(transpose = True)
 ```
-<img src="/assets/img/blog_11_1.png"  width=60% height=60%>
+
+![png](/assets/img/blog_11_1.png){:width="60%"}.
 
 Since a PCA is one of the most common transformations applied on -omics data, it is natively supported as well. First we autoscale the data and store it in the assay `scaled` by calling the method `.autoScale()`. We then use this assay, together with 2 components to calculate the transformation. The method `.pca()` returns a DataFrame that can be plotted by calling `.plot.scatter()` with the appropriate axes:
 
