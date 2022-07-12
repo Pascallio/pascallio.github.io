@@ -32,10 +32,13 @@ To get some insights on this subject, I performed text mining using [Europe PubM
 
 For my most recent project, pySummarizedExperiment (here), I will show the DOCKERFILE used to construct the container. We start by selecting a base image for our code. Choosing a base image depends on the size of the image, but also its dependencies. A barebone image would be very small, but also requires more work to identify the dependencies needed for your code. Luckily, a lot of images have been shared on [Dockerhub](https://hub.docker.com/), so it's best to start there. For this project, I don't need many dependencies, except for Python. I will therefore pick the Python container [here](https://hub.docker.com/_/python). We start by executing the pull command given on Dockerhub `docker pull python`. This makes the image available for us to use. 
 
-Next, we will create a file called `DOCKERFILE` in the project directory. This file starts with a `FROM` statements that specifies the base image to use. 
+Next, we will create a file called `DOCKERFILE` in the project directory. This file starts with a `FROM` statements that specifies the base image to use. We use the `python` image, version 3. 
+
+```dockerfile
+FROM python:3
 
 
-
+```
 # Conclusion 
 
 <!--  Conclusion on containerization, (bio)science should catch up -->
